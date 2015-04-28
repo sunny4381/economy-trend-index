@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>OurOpenData Sample Application</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.0/css/bootstrap-datepicker3.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.0/js/bootstrap-datepicker.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.0/locales/bootstrap-datepicker.ja.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="./">徳島県景気動向指数</a>
+        <p class="navbar-text">2015年1月分</p>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <form id="search" class="navbar-form navbar-right">
+          <div class="form-group input-group">
+            <input id="start_at" type="text" class="form-control input-month start-at" placeholder="開始">
+            <span class="input-group-addon"> ~ </span>
+            <input id="end_at" type="text" class="form-control input-month end-at" placeholder="終了">
+          </div>
+          <div class="btn-group">
+            <button type="submit" class="btn btn-success"><span class="economic-index-type__label">指数</span>検索</button>
+            <button type="submit" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+              <span class="caret"></span>
+              <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li><a id="economic-index-type__ci" class="economic-index-type" href="http://ouropendata.jp/dataset/321/resource/509/TCI-CI.csv">一致指数</a></li>
+              <li><a id="economic-index-type__li" class="economic-index-type" href="http://ouropendata.jp/dataset/321/resource/511/TCI-LI.csv">先行指数</a></li>
+              <li><a id="economic-index-type__lgi" class="economic-index-type" href="http://ouropendata.jp/dataset/321/resource/510/TCI-LgI.csv">遅行指数</a></li>
+            </ul>
+          </div>
+        </form>
+      </div><!--/.navbar-collapse -->
+    </div>
+  </nav>
+
+  <div id="content">
+    <canvas class="economy-index-chart"></canvas>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+/* normlize */
+/* @import url('../node_modules/normalize-css/normalize.css'); */
+
+/* more global styles if needed */
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+#start_at, #end_at {
+  width: 100px;
+}
