@@ -4,6 +4,10 @@
   "version": "0.0.1",
   "author": "NAKANO Hideo <nakano@web-tips.co.jp>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sunny4381/economy-trend-index.git"
+  },
   "dependencies": {
     "normalize-css": "^2.3.1"
   },
