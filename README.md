@@ -7,7 +7,7 @@ This is Single Page Node Application of Economy Trend Index for [Our Open Data](
 
 Install it yourself as:
 
-    $ git clone git://github.com/sunny4381/economy-trend-index.git
+    $ git clone https://github.com/sunny4381/economy-trend-index.git
     $ cd economy-trend-index
     $ npm install
     $ npm start
